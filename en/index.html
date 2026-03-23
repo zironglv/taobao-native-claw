@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taobao Native CLI | AI-Powered Taobao Shopping Assistant</title>
+  <meta name="description" content="Taobao Native CLI enables your AI assistant to directly control the Taobao desktop client for search, cart, orders, and more.">
+  <link rel="icon" href="../assets/images/logo.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <img src="../assets/images/logo.png" alt="Logo">
+        <span class="nav-logo-text">Taobao Native CLI</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#quickstart">Quick Start</a></li>
+        <li><a href="#demos">Use Cases</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="../index.html" class="lang-switch">中文</a>
+        <a href="#quickstart" class="btn-primary">Get Started</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-badge">
+      <span class="hero-badge-dot"></span>
+      <span>Open Source • Free Forever</span>
+    </div>
+    <h1 class="hero-title">
+      Let AI Control Your<br>
+      <span class="highlight">Taobao Desktop</span>
+    </h1>
+    <p class="hero-subtitle">
+      <span id="typewriter"></span>
+    </p>
+    <div class="hero-cta">
+      <a href="#quickstart" class="btn-primary">Get Started</a>
+      <a href="https://github.com" class="btn-secondary" target="_blank">View on GitHub</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Features</span>
+        <h2 class="section-title">Why Taobao Native CLI</h2>
+        <p class="section-desc">Four core advantages for a powerful AI shopping assistant</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Ready to Use</h3>
+          <p class="feature-desc">Reuses your logged-in Taobao desktop client state. No CAPTCHAs, no anti-bot challenges. Install and go.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Native Operations</h3>
+          <p class="feature-desc">Based on Chromium native input events. More stable and reliable than browser automation. Behaves like real users.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Full Coverage</h3>
+          <p class="feature-desc">Supports product search, details, cart, orders, WangWang chat, and the complete Taobao shopping workflow.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Standard Skill & CLI</h3>
+          <p class="feature-desc">Supports OpenClaw/CoPaw/Qoder and other OpenClaw-compatible AI assistants. One command to install.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Start Section -->
+  <section class="quickstart" id="quickstart">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Quick Start</span>
+        <h2 class="section-title">Four Steps to AI Shopping</h2>
+        <p class="section-desc">Simple steps to give your AI assistant Taobao shopping capabilities</p>
+      </div>
+      <div class="steps-container">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <div class="step-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
+            </svg>
+          </div>
+          <h3 class="step-title">Install Taobao Desktop</h3>
+          <p class="step-desc">Download, install and login to Taobao Desktop</p>
+          <a href="https://pc.taobao.com/?spm=a21bo.jianhua/a.20220530.1.5af92a89nl3JbT&channel=shouje" target="_blank" class="step-code step-link">Download Now</a>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <div class="step-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 010 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 010-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="step-title">Enable AI Settings</h3>
+          <p class="step-desc">Enable AI agent and operation permissions</p>
+          <div class="step-code">Settings → AI Settings → Enable All</div>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <div class="step-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+            </svg>
+          </div>
+          <h3 class="step-title">Install Skill</h3>
+          <p class="step-desc">Run the install command in your AI assistant</p>
+          <div class="step-code">clawhub install Taobao Native</div>
+        </div>
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <div class="step-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M15.75 9A2.25 2.25 0 1012 11.25 2.25 2.25 0 0015.75 9z" />
+            </svg>
+          </div>
+          <h3 class="step-title">Start Using</h3>
+          <p class="step-desc">Tell your AI what you want in natural language</p>
+          <div class="step-code">"Search for wireless mouse"</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demos Section -->
+  <section class="demos" id="demos">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Use Cases</span>
+        <h2 class="section-title">Control Taobao with Conversations</h2>
+        <p class="section-desc">Complete various shopping tasks with natural language</p>
+      </div>
+      <div class="demo-grid">
+        <!-- Case 1: Search -->
+        <div class="demo-card">
+          <div class="demo-header">
+            <div class="demo-dots">
+              <span class="demo-dot red"></span>
+              <span class="demo-dot yellow"></span>
+              <span class="demo-dot green"></span>
+            </div>
+            <span class="demo-title">🔍 Search & Compare</span>
+          </div>
+          <div class="demo-content">
+            <div class="chat-bubble chat-user">Search AirPods Pro 2, find the cheapest store</div>
+            <div class="chat-bubble chat-ai">Searching AirPods Pro 2...</div>
+            <div class="chat-bubble chat-ai">Found 86 products, top 3 cheapest:<br>• Apple Authorized: $199<br>• Digital Store: $254<br>• Official Store: $279</div>
+            <div class="chat-bubble chat-user">Add the cheapest to cart</div>
+            <div class="chat-bubble chat-ai">✅ Added to cart! Store: Apple Authorized, Price $199</div>
+          </div>
+        </div>
+        
+        <!-- Case 2: Orders -->
+        <div class="demo-card">
+          <div class="demo-header">
+            <div class="demo-dots">
+              <span class="demo-dot red"></span>
+              <span class="demo-dot yellow"></span>
+              <span class="demo-dot green"></span>
+            </div>
+            <span class="demo-title">📦 Order Management</span>
+          </div>
+          <div class="demo-content">
+            <div class="chat-bubble chat-user">Check my pending shipments</div>
+            <div class="chat-bubble chat-ai">Found 2 pending orders:<br>1. Huawei FreeBuds - 3 days ago<br>2. Xiaomi Cable - 1 day ago</div>
+            <div class="chat-bubble chat-user">Remind the first one to ship</div>
+            <div class="chat-bubble chat-ai">✅ Sent shipping reminder to Huawei official store</div>
+          </div>
+        </div>
+        
+        <!-- Case 3: WangWang -->
+        <div class="demo-card">
+          <div class="demo-header">
+            <div class="demo-dots">
+              <span class="demo-dot red"></span>
+              <span class="demo-dot yellow"></span>
+              <span class="demo-dot green"></span>
+            </div>
+            <span class="demo-title">💬 WangWang Chat</span>
+          </div>
+          <div class="demo-content">
+            <div class="chat-bubble chat-user">Ask this seller for a discount</div>
+            <div class="chat-bubble chat-ai">Opened WangWang, sent: "Hi, can you offer a discount?"</div>
+            <div class="chat-bubble chat-ai">Seller replied: Current price is already the lowest, but I can include a small gift~</div>
+            <div class="chat-bubble chat-user">Ask what gift</div>
+            <div class="chat-bubble chat-ai">Seller replied: Phone stand, just note it when ordering~</div>
+          </div>
+        </div>
+        
+        <!-- Case 4: Image Search -->
+        <div class="demo-card">
+          <div class="demo-header">
+            <div class="demo-dots">
+              <span class="demo-dot red"></span>
+              <span class="demo-dot yellow"></span>
+              <span class="demo-dot green"></span>
+            </div>
+            <span class="demo-title">📷 Image Search</span>
+          </div>
+          <div class="demo-content">
+            <div class="chat-bubble chat-user">Find similar products with this image, cheapest first</div>
+            <div class="chat-bubble chat-ai">Searching by image...</div>
+            <div class="chat-bubble chat-ai">Found 23 similar products:<br>• Lowest: $5 (12k sold)<br>• Official Store: $15</div>
+            <div class="chat-bubble chat-user">Check this store's rating</div>
+            <div class="chat-bubble chat-ai">Store rating: Description 4.8⭐ / Shipping 4.9⭐ / Service 4.7⭐</div>
+          </div>
+        </div>
+        
+        <!-- Case 5: Returns -->
+        <div class="demo-card">
+          <div class="demo-header">
+            <div class="demo-dots">
+              <span class="demo-dot red"></span>
+              <span class="demo-dot yellow"></span>
+              <span class="demo-dot green"></span>
+            </div>
+            <span class="demo-title">↩️ Returns & Refunds</span>
+          </div>
+          <div class="demo-content">
+            <div class="chat-bubble chat-user">These shoes are wrong size, help me return them</div>
+            <div class="chat-bubble chat-ai">Found order: Running shoes - delivered 2 days ago</div>
+            <div class="chat-bubble chat-ai">Return reason? 1.Wrong size 2.Quality issue 3.Don't want</div>
+            <div class="chat-bubble chat-user">Option 1, wrong size</div>
+            <div class="chat-bubble chat-ai">✅ Return submitted! Pickup code: TB8862, courier coming tomorrow</div>
+          </div>
+        </div>
+        
+        <!-- Case 6: Price Monitor -->
+        <div class="demo-card">
+          <div class="demo-header">
+            <div class="demo-dots">
+              <span class="demo-dot red"></span>
+              <span class="demo-dot yellow"></span>
+              <span class="demo-dot green"></span>
+            </div>
+            <span class="demo-title">💰 Price Monitor</span>
+          </div>
+          <div class="demo-content">
+            <div class="chat-bubble chat-user">Watch this phone, notify me when under $4000</div>
+            <div class="chat-bubble chat-ai">Price monitoring enabled. Current: $4299, Target: under $4000</div>
+            <div class="chat-bubble chat-ai">🔔 Price alert! iPhone 15 Pro now $3899, dropped $400</div>
+            <div class="chat-bubble chat-user">Great, order it for me</div>
+            <div class="chat-bubble chat-ai">✅ Ordered! Order #: TB202403231588, arriving in 3 days</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq" id="faq">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-desc">Common questions about Taobao Native CLI</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Is Taobao Native CLI free?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, Taobao Native CLI is completely free and open source. Simply install the Taobao desktop client and Taobao Native Skill to get started.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Which AI assistants are supported?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Currently supports all OpenClaw-compatible AI assistants, including OpenClaw, CoPaw, Qoder, and more. Check if your AI assistant supports OpenClaw Skill format.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Is my Taobao account safe?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Absolutely safe. Taobao Native CLI directly controls your locally logged-in Taobao client. All operations happen on your computer - no account info or passwords are uploaded. AI only controls the client interface via CLI commands, exactly like you would manually.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Which operating systems are supported?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Currently supports macOS (Apple Silicon and Intel) and Windows. Linux support is under development.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What if I encounter problems?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>You can submit issues on GitHub, or join our DingTalk beta group for technical support and feedback.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community Section -->
+  <section class="community">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Community</span>
+        <h2 class="section-title">Join DingTalk Beta Group</h2>
+        <p class="section-desc">Get latest updates, technical support and provide feedback</p>
+      </div>
+      <div class="community-card">
+        <h3 class="community-title">DingTalk Beta Group</h3>
+        <p class="community-desc">Scan QR code or search group number</p>
+        <div class="community-qrcode">
+          <img src="../images/dingtalk-qrcode.png" alt="DingTalk QR Code">
+        </div>
+        <p class="community-id">Group: 181120004109</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <span class="footer-logo-text">Taobao Native CLI</span>
+          <p class="footer-slogan">AI-Powered Taobao Shopping Assistant</p>
+        </div>
+        <div class="footer-links-group">
+          <div class="footer-col">
+            <h4>Product</h4>
+            <a href="#features">Features</a>
+            <a href="#quickstart">Quick Start</a>
+            <a href="#demos">Use Cases</a>
+          </div>
+          <div class="footer-col">
+            <h4>Support</h4>
+            <a href="#faq">FAQ</a>
+            <a href="https://github.com" target="_blank">GitHub</a>
+            <a href="#">Changelog</a>
+          </div>
+          <div class="footer-col">
+            <h4>Links</h4>
+            <a href="https://www.taobao.com" target="_blank">Taobao</a>
+            <a href="https://www.tmall.com" target="_blank">Tmall</a>
+            <a href="https://pc.taobao.com" target="_blank">Taobao Desktop</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-partners">
+          <span>Alibaba Group:</span>
+          <a href="https://www.alibaba.com" target="_blank">Alibaba Group</a>
+          <a href="https://www.taobao.com" target="_blank">Taobao</a>
+          <a href="https://www.tmall.com" target="_blank">Tmall</a>
+          <a href="https://ju.taobao.com" target="_blank">JuTaobao</a>
+          <a href="https://www.aliyun.com" target="_blank">Aliyun</a>
+        </div>
+        <div class="footer-legal">
+          <a href="#">About Us</a>
+          <span>|</span>
+          <a href="#">Partners</a>
+          <span>|</span>
+          <a href="#">Legal Notice</a>
+          <span>|</span>
+          <a href="#">Privacy Policy</a>
+          <span>|</span>
+          <a href="#">Intellectual Property</a>
+        </div>
+        <div class="footer-copyright">
+          <p>© 2024 Taobao. All Rights Reserved.</p>
+          <p>Value-added Telecom Business License: Zhe B2-20080224</p>
+          <p><a href="https://beian.miit.gov.cn/" target="_blank">Zhe ICP No. 09109183-1</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js?v=2"></script>
+</body>
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>淘宝桌面版CLAW - Taobao Native CLI | AI驱动的淘宝购物助手</title>
+  <meta name="description" content="淘宝桌面版CLAW让你的AI助手直接操控淘宝客户端，实现搜索、加购、下单、订单管理等全流程自动化。">
+  <link rel="icon" href="images/logo.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <img src="assets/images/logo.png" alt="Logo">
+        <span class="nav-logo-text">淘宝桌面版CLAW</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#features">功能优势</a></li>
+        <li><a href="#quickstart">快速上手</a></li>
+        <li><a href="#demos">使用场景</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="en/index.html" class="lang-switch">English</a>
+        <a href="#quickstart" class="btn-primary">立即开始</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          <span>全新发布 · 开放使用</span>
+        </div>
+        <h1 class="hero-title">淘宝桌面版CLAW</h1>
+        <p class="hero-subtitle">
+          <span class="typewriter" id="typewriter"></span>
+          <span class="typewriter-cursor"></span>
+        </p>
+        <div class="hero-cta">
+          <a href="#quickstart" class="btn-primary">
+            <span>🚀</span> 快速开始
+          </a>
+          <a href="#demos" class="btn-secondary">
+            <span>📖</span> 查看示例
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">功能优势</span>
+        <h2 class="section-title">为什么选择淘宝桌面版CLAW</h2>
+        <p class="section-desc">四大核心优势，让 AI 购物助手更强大</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="feature-title">开箱即用</h3>
+          <p class="feature-desc">复用已登录的淘宝桌面客户端状态，无需处理验证码、滑块验证等反爬机制，安装即可使用。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+            </svg>
+          </div>
+          <h3 class="feature-title">原生操作</h3>
+          <p class="feature-desc">基于 Chromium 原生输入事件，比浏览器自动化更稳定可靠，操作更接近真实用户行为。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+            </svg>
+          </div>
+          <h3 class="feature-title">功能全面</h3>
+          <p class="feature-desc">支持商品搜索、详情查看、加购下单、订单管理、旺旺聊天等淘宝购物全流程操作。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+            </svg>
+          </div>
+          <h3 class="feature-title">标准 Skill & CLI</h3>
+          <p class="feature-desc">支持 OpenClaw/CoPaw/Qoder 等主流 OpenClaw 类 AI 助手，一行命令即可安装。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Start Section -->
+  <section class="quickstart" id="quickstart">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">快速上手</span>
+        <h2 class="section-title">四步开启 AI 购物之旅</h2>
+        <p class="section-desc">简单四步，让你的 AI 助手拥有淘宝购物能力</p>
+      </div>
+      <div class="steps-container">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <div class="step-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
+            </svg>
+          </div>
+          <h3 class="step-title">安装淘宝桌面版</h3>
+          <p class="step-desc">下载安装并登录淘宝桌面版</p>
+          <a href="https://pc.taobao.com/?spm=a21bo.jianhua/a.20220530.1.5af92a89nl3JbT&channel=shouye" target="_blank" class="step-code step-link">一键下载</a>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <div class="step-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 010 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 010-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="step-title">开启 AI 设置</h3>
+          <p class="step-desc">开启AI代理与操作的权限</p>
+          <div class="step-code">设置 → AI 设置 → 开启全部</div>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <div class="step-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+            </svg>
+          </div>
+          <h3 class="step-title">安装 Skill</h3>
+          <p class="step-desc">在你的 AI 助手中执行安装命令。</p>
+          <div class="step-code">clawhub install Taobao Native</div>
+        </div>
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <div class="step-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M15.75 9A2.25 2.25 0 1012 11.25 2.25 2.25 0 0015.75 9z" />
+            </svg>
+          </div>
+          <h3 class="step-title">开始使用</h3>
+          <p class="step-desc">用自然语言告诉 AI 你想做什么。</p>
+          <div class="step-code">"帮我搜索无线鼠标"</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demos Section -->
+  <section class="demos" id="demos">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">使用场景</span>
+        <h2 class="section-title">对话式操控淘宝</h2>
+        <p class="section-desc">用自然语言与 AI 对话，完成各种购物任务</p>
+      </div>
+      <div class="demo-grid">
+        <!-- 案例1: 搜索商品 -->
+        <div class="demo-card">
+          <div class="demo-header">
+            <div class="demo-dots">
+              <span class="demo-dot red"></span>
+              <span class="demo-dot yellow"></span>
+              <span class="demo-dot green"></span>
+            </div>
+            <span class="demo-title">🔍 搜索比价</span>
+          </div>
+          <div class="demo-content">
+            <div class="chat-bubble chat-user">帮我搜一下AirPods Pro 2，找个最便宜的店</div>
+            <div class="chat-bubble chat-ai">好的，正在搜索 AirPods Pro 2...</div>
+            <div class="chat-bubble chat-ai">找到 86 个商品，最便宜的3家：<br>• 苹果授权店：¥1499<br>• 数码专营店：¥1549<br>• 官方旗舰店：¥1799</div>
+            <div class="chat-bubble chat-user">好的，加一下吧</div>
+            <div class="chat-bubble chat-ai">✅ 已添加到购物车！店铺：苹果授权店</div>
+          </div>
+        </div>
+        
+        <!-- 案例2: 订单管理 -->
+        <div class="demo-card">
+          <div class="demo-header">
+            <div class="demo-dots">
+              <span class="demo-dot red"></span>
+              <span class="demo-dot yellow"></span>
+              <span class="demo-dot green"></span>
+            </div>
+            <span class="demo-title">📦 订单管理</span>
+          </div>
+          <div class="demo-content">
+            <div class="chat-bubble chat-user">看下我最近有什么订单还没发货</div>
+            <div class="chat-bubble chat-ai">找到 2 个待发货订单：<br>1. 华为FreeBuds耳机 - 3天前<br>2. 小米数据线 - 1天前</div>
+            <div class="chat-bubble chat-user">催一下第一个吧</div>
+            <div class="chat-bubble chat-ai">✅ 已向华为官方店发送催发货消息</div>
+          </div>
+        </div>
+        
+        <!-- 案例3: 旺旺客服 -->
+        <div class="demo-card">
+          <div class="demo-header">
+            <div class="demo-dots">
+              <span class="demo-dot red"></span>
+              <span class="demo-dot yellow"></span>
+              <span class="demo-dot green"></span>
+            </div>
+            <span class="demo-title">💬 旺旺客服</span>
+          </div>
+          <div class="demo-content">
+            <div class="chat-bubble chat-user">问问这个卖家能不能优惠点</div>
+            <div class="chat-bubble chat-ai">已打开旺旺，发送："老板好，这款能优惠点吗？"</div>
+            <div class="chat-bubble chat-ai">卖家回复：亲，现在活动价已经是最低了，可以送个小礼品~</div>
+            <div class="chat-bubble chat-user">问问送什么礼品</div>
+            <div class="chat-bubble chat-ai">卖家回复：送手机支架一个，下单备注就行~</div>
+          </div>
+        </div>
+        
+        <!-- 案例4: 图片搜索 -->
+        <div class="demo-card">
+          <div class="demo-header">
+            <div class="demo-dots">
+              <span class="demo-dot red"></span>
+              <span class="demo-dot yellow"></span>
+              <span class="demo-dot green"></span>
+            </div>
+            <span class="demo-title">📷 图片搜同款</span>
+          </div>
+          <div class="demo-content">
+            <div class="chat-bubble chat-user">用这张图帮我找同款，要便宜的</div>
+            <div class="chat-bubble chat-ai">正在以图搜图...</div>
+            <div class="chat-bubble chat-ai">找到 23 个同款：<br>• 最低：¥35 (销量1.2万)<br>• 官方店：¥89</div>
+            <div class="chat-bubble chat-user">看下这个店铺评分</div>
+            <div class="chat-bubble chat-ai">店铺评分：描述相符 4.8⭐ / 物流服务 4.9⭐ / 售后服务 4.7⭐</div>
+          </div>
+        </div>
+        
+        <!-- 案例5: 退货退款 -->
+        <div class="demo-card">
+          <div class="demo-header">
+            <div class="demo-dots">
+              <span class="demo-dot red"></span>
+              <span class="demo-dot yellow"></span>
+              <span class="demo-dot green"></span>
+            </div>
+            <span class="demo-title">↩️ 退货退款</span>
+          </div>
+          <div class="demo-content">
+            <div class="chat-bubble chat-user">前天买的鞋子码数不对，帮我申请退货</div>
+            <div class="chat-bubble chat-ai">找到订单：安踏运动鞋 - 2天前签收</div>
+            <div class="chat-bubble chat-ai">退货原因？1.尺码不合适 2.质量问题 3.不喜欢</div>
+            <div class="chat-bubble chat-user">选1，尺码不合适</div>
+            <div class="chat-bubble chat-ai">✅ 退货申请已提交！取件码：TB8862，预计明天上门取件</div>
+          </div>
+        </div>
+        
+        <!-- 案例6: 价格监控 -->
+        <div class="demo-card">
+          <div class="demo-header">
+            <div class="demo-dots">
+              <span class="demo-dot red"></span>
+              <span class="demo-dot yellow"></span>
+              <span class="demo-dot green"></span>
+            </div>
+            <span class="demo-title">💰 价格监控</span>
+          </div>
+          <div class="demo-content">
+            <div class="chat-bubble chat-user">帮我盯着这款手机，低于4000告诉我</div>
+            <div class="chat-bubble chat-ai">好的，已开启价格监控。当前：¥4299，目标：¥4000以下</div>
+            <div class="chat-bubble chat-ai">🔔 降价提醒！iPhone 15 Pro 现价 ¥3899，降幅 ¥400</div>
+            <div class="chat-bubble chat-user">太好了，帮我下单</div>
+            <div class="chat-bubble chat-ai">✅ 已下单！订单号：TB202403231588，预计3天内送达</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq" id="faq">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">常见问题</span>
+        <h2 class="section-title">FAQ</h2>
+        <p class="section-desc">关于淘宝桌面版CLAW的常见问题解答</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>淘宝桌面版CLAW是免费的吗？</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>是的，淘宝桌面版CLAW完全免费开源，你可以自由安装和使用。只需安装淘宝桌面客户端和Taobao Native Skill即可开始使用。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>支持哪些 AI 助手？</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>目前支持所有兼容 OpenClaw 标准的 AI 助手，包括 OpenClaw、CoPaw、Qoder 等。如果你使用其他 AI 助手，可以查看是否支持 OpenClaw Skill 格式。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>我的淘宝账号安全吗？</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>绝对安全。淘宝桌面版CLAW直接操作你本地已登录的淘宝客户端，所有操作都在你的电脑上完成，不会上传任何账号信息或密码。AI 只是通过 CLI 命令操控客户端界面，与你自己操作完全一致。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>支持哪些操作系统？</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>目前支持 macOS（Apple Silicon 和 Intel）以及 Windows 系统。淘宝桌面客户端需要从官方网站下载对应版本。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>能完成哪些购物操作？</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>支持大部分淘宝购物操作：商品搜索、商品详情查看、加入购物车、订单查询、催发货、开发票、旺旺聊天、收藏夹管理、浏览历史查看、图片搜索等。持续更新中...</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>遇到问题怎么办？</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>可以加入我们的钉钉内测群（群号：181120004109）获取技术支持，或者查阅产品文档了解常见问题解决方案。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community Section -->
+  <section class="community" id="community">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">加入社区</span>
+        <h2 class="section-title">加入钉钉内测群</h2>
+        <p class="section-desc">获取最新动态、技术支持和问题反馈</p>
+      </div>
+      <div class="community-card">
+        <h3 class="community-title">钉钉内测群</h3>
+        <p class="community-desc">扫码加入或搜索群号</p>
+        <div class="community-qrcode">
+          <img src="images/dingtalk-qrcode.png" alt="钉钉群二维码">
+        </div>
+        <p class="community-id">群号：181120004109</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <span class="footer-logo-text">淘宝桌面版CLAW</span>
+          <p class="footer-slogan">AI驱动的淘宝购物助手</p>
+        </div>
+        <div class="footer-links-group">
+          <div class="footer-col">
+            <h4>产品</h4>
+            <a href="#features">功能介绍</a>
+            <a href="#quickstart">快速上手</a>
+            <a href="#demos">使用场景</a>
+          </div>
+          <div class="footer-col">
+            <h4>支持</h4>
+            <a href="#faq">常见问题</a>
+            <a href="https://github.com" target="_blank">GitHub</a>
+            <a href="#">更新日志</a>
+          </div>
+          <div class="footer-col">
+            <h4>相关链接</h4>
+            <a href="https://www.taobao.com" target="_blank">淘宝网</a>
+            <a href="https://www.tmall.com" target="_blank">天猫</a>
+            <a href="https://pc.taobao.com" target="_blank">淘宝桌面版</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-partners">
+          <span>阿里巴巴旗下：</span>
+          <a href="https://www.alibaba.com" target="_blank">阿里巴巴集团</a>
+          <a href="https://www.taobao.com" target="_blank">淘宝网</a>
+          <a href="https://www.tmall.com" target="_blank">天猫</a>
+          <a href="https://ju.taobao.com" target="_blank">聚划算</a>
+          <a href="https://www.aliyun.com" target="_blank">阿里云</a>
+        </div>
+        <div class="footer-legal">
+          <a href="#">关于我们</a>
+          <span>|</span>
+          <a href="#">合作伙伴</a>
+          <span>|</span>
+          <a href="#">法律声明</a>
+          <span>|</span>
+          <a href="#">隐私权政策</a>
+          <span>|</span>
+          <a href="#">知识产权</a>
+        </div>
+        <div class="footer-copyright">
+          <p>© 2024 淘宝 版权所有</p>
+          <p>增值电信业务经营许可证：浙B2-20080224</p>
+          <p><a href="https://beian.miit.gov.cn/" target="_blank">浙ICP备09109183号-1</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js?v=2"></script>
+</body>
+</html>
