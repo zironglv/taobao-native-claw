@@ -343,6 +343,442 @@
     </div>
   </section>
 
+  <!-- User Stories Section -->
+  <section class="user-stories" id="stories">
+    <div class="stories-container">
+      <div class="stories-header">
+        <h2>真实案例 · <span>Clothy 用户故事</span></h2>
+        <p>看看真实的用户如何用 Clothy 管理穿搭</p>
+      </div>
+      
+      <div class="stories-intro">
+        <span class="stories-intro-badge">OpenClaw 生态 Skill</span>
+        <h3><span>🌸</span> Clothy - AI穿搭闺蜜</h3>
+        <p>拍照录入衣橱、智能推荐搭配、逛街种草咨询，支持多人衣橱管理，全家穿搭一个 Skill 搞定</p>
+      </div>
+      
+      <div class="story-tabs">
+        <button class="story-tab active" onclick="switchStory(0)">第一次见面</button>
+        <button class="story-tab" onclick="switchStory(1)">衣橱数字化</button>
+        <button class="story-tab" onclick="switchStory(2)">每天早上</button>
+        <button class="story-tab" onclick="switchStory(3)">全家人的衣橱</button>
+        <button class="story-tab" onclick="switchStory(4)">逛街参谋</button>
+      </div>
+      
+      <!-- Story 1: 第一次见面 -->
+      <div class="story-content active" id="story-0">
+        <div class="story-card">
+          <div class="chat-container">
+            <div class="chat-message user">
+              <div class="chat-avatar user-avatar">我</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">你好！</div>
+                <span class="chat-time">上午 10:32</span>
+              </div>
+            </div>
+            
+            <div class="chat-message ai">
+              <div class="chat-avatar ai-avatar">🌸</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">嗨～我是 Clothy，你的 AI 穿搭闺蜜！🌸<br><br>我可以帮你管理衣橱、推荐每日穿搭、还能在逛街时给你参谋。先让我认识一下你吧～</div>
+                <span class="chat-time">上午 10:32</span>
+              </div>
+            </div>
+            
+            <div class="chat-message ai">
+              <div class="chat-avatar ai-avatar">🌸</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">你平时喜欢什么风格呀？<br><br>比如：休闲、通勤、甜美、酷飒、韩系...</div>
+                <span class="chat-time">上午 10:32</span>
+              </div>
+            </div>
+            
+            <div class="chat-message user">
+              <div class="chat-avatar user-avatar">我</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">平时上班穿得简单点，周末会想打扮一下，算休闲+轻熟？</div>
+                <span class="chat-time">上午 10:33</span>
+              </div>
+            </div>
+            
+            <div class="chat-message ai">
+              <div class="chat-avatar ai-avatar">🌸</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">收到！休闲+轻熟，懂了～</div>
+                <div class="chat-card">
+                  <div class="chat-card-title">✨ 已记录你的风格偏好</div>
+                  <div class="chat-card-content">
+                    主风格：休闲、轻熟<br>
+                    场景：通勤日常、周末休闲
+                  </div>
+                  <div class="chat-card-tags">
+                    <span class="chat-card-tag">简约</span>
+                    <span class="chat-card-tag">通勤</span>
+                    <span class="chat-card-tag">周末</span>
+                  </div>
+                </div>
+                <span class="chat-time">上午 10:33</span>
+              </div>
+            </div>
+            
+            <div class="chat-message ai">
+              <div class="chat-avatar ai-avatar">🌸</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">接下来，要不要把你的衣橱交给我管理？我可以帮你：<br><br>📸 拍照录入衣服<br>🛒 导入淘宝订单自动分析<br>📊 分析你的衣橱构成</div>
+                <span class="chat-time">上午 10:33</span>
+              </div>
+            </div>
+            
+            <div class="chat-message user">
+              <div class="chat-avatar user-avatar">我</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">导入淘宝订单？这个怎么弄？</div>
+                <span class="chat-time">上午 10:34</span>
+              </div>
+            </div>
+            
+            <div class="chat-message ai">
+              <div class="chat-avatar ai-avatar">🌸</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">很简单！只要你有安装淘宝 Native Skill，我就能帮你拉取历史订单，自动识别你买过的衣服、分析你的购物风格偏好～<br><br>要试试吗？</div>
+                <span class="chat-time">上午 10:34</span>
+              </div>
+            </div>
+          </div>
+          <div class="story-footer">
+            <span class="story-hint">💡 <span>提示</span>：首次使用会引导你完善身材、风格等信息</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Story 2: 衣橱数字化 -->
+      <div class="story-content" id="story-1">
+        <div class="story-card">
+          <div class="chat-container">
+            <div class="chat-message user">
+              <div class="chat-avatar user-avatar">我</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">帮我导入淘宝订单吧</div>
+                <span class="chat-time">上午 10:35</span>
+              </div>
+            </div>
+            
+            <div class="chat-message ai">
+              <div class="chat-avatar ai-avatar">🌸</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">好的，正在拉取你的淘宝订单...</div>
+                <span class="chat-time">上午 10:35</span>
+              </div>
+            </div>
+            
+            <div class="chat-message ai">
+              <div class="chat-avatar ai-avatar">🌸</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">找到你过去一年的服装订单 <strong>37 笔</strong>！正在分析...</div>
+                <span class="chat-time">上午 10:35</span>
+              </div>
+            </div>
+            
+            <div class="chat-message ai">
+              <div class="chat-avatar ai-avatar">🌸</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">分析完成！来看看你的购物风格 👇</div>
+                <div class="chat-card">
+                  <div class="chat-card-title">📊 你的衣橱画像</div>
+                  <div class="chat-card-content">
+                    <strong>颜色偏好：</strong>黑白灰 60%、大地色 25%<br>
+                    <strong>品类分布：</strong>上衣 18件、下装 12件、外套 5件、鞋 2双<br>
+                    <strong>购物习惯：</strong>平均客单价 ¥158，偏好基础款
+                  </div>
+                </div>
+                <span class="chat-time">上午 10:36</span>
+              </div>
+            </div>
+            
+            <div class="chat-message ai">
+              <div class="chat-avatar ai-avatar">🌸</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">我注意到一个问题 😅<br><br>你的衣橱里<strong>夏季单品偏多</strong>，秋季外套只有 2 件。建议补充一件风衣或针织开衫～</div>
+                <span class="chat-time">上午 10:36</span>
+              </div>
+            </div>
+            
+            <div class="chat-message user">
+              <div class="chat-avatar user-avatar">我</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">确实...去年秋天老觉得没衣服穿</div>
+                <span class="chat-time">上午 10:37</span>
+              </div>
+            </div>
+            
+            <div class="chat-message ai">
+              <div class="chat-avatar ai-avatar">🌸</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">这就是衣橱分析的意义呀～<br><br>我已经把这 37 笔订单的衣服都录入你的衣橱了，你可以随时问我"今天穿什么"，我来帮你搭配！</div>
+                <span class="chat-time">上午 10:37</span>
+              </div>
+            </div>
+          </div>
+          <div class="story-footer">
+            <span class="story-hint">💡 <span>提示</span>：订单导入后自动识别服装品类、颜色、季节</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Story 3: 每天早上 -->
+      <div class="story-content" id="story-2">
+        <div class="story-card">
+          <div class="chat-container">
+            <div class="chat-message user">
+              <div class="chat-avatar user-avatar">我</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">今天穿什么？</div>
+                <span class="chat-time">早上 7:42</span>
+              </div>
+            </div>
+            
+            <div class="chat-message ai">
+              <div class="chat-avatar ai-avatar">🌸</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">早上好！☀️<br><br>今天杭州 <strong>18°C，多云</strong>，适合穿薄外套。你要去公司对吧？</div>
+                <span class="chat-time">早上 7:42</span>
+              </div>
+            </div>
+            
+            <div class="chat-message user">
+              <div class="chat-avatar user-avatar">我</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">对的</div>
+                <span class="chat-time">早上 7:43</span>
+              </div>
+            </div>
+            
+            <div class="chat-message ai">
+              <div class="chat-avatar ai-avatar">🌸</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">推荐你今天这样穿 👇</div>
+                <div class="chat-card">
+                  <div class="chat-card-title">👔 今日穿搭 · 通勤风</div>
+                  <div class="chat-card-content">
+                    <strong>上衣：</strong>米色针织衫（已穿过2次）<br>
+                    <strong>下装：</strong>深蓝色直筒牛仔裤<br>
+                    <strong>外套：</strong>卡其色风衣<br>
+                    <strong>鞋子：</strong>白色帆布鞋
+                  </div>
+                  <div class="chat-card-tags">
+                    <span class="chat-card-tag">18°C 适合</span>
+                    <span class="chat-card-tag">通勤</span>
+                    <span class="chat-card-tag">轻熟风</span>
+                  </div>
+                </div>
+                <span class="chat-time">早上 7:43</span>
+              </div>
+            </div>
+            
+            <div class="chat-message user">
+              <div class="chat-avatar user-avatar">我</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">那个米色针织衫...好像有点起球了</div>
+                <span class="chat-time">早上 7:44</span>
+              </div>
+            </div>
+            
+            <div class="chat-message ai">
+              <div class="chat-avatar ai-avatar">🌸</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">那我帮你换一个！<br><br>你要不要试试那件<strong>黑色高领打底衫</strong>？和风衣也很配，而且还没穿过几次～</div>
+                <span class="chat-time">早上 7:44</span>
+              </div>
+            </div>
+            
+            <div class="chat-message user">
+              <div class="chat-avatar user-avatar">我</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">好！就这个了</div>
+                <span class="chat-time">早上 7:45</span>
+              </div>
+            </div>
+            
+            <div class="chat-message ai">
+              <div class="chat-avatar ai-avatar">🌸</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">✅ 已记录今天的穿搭！<br><br>对了，我发现你的黑色高领打底衫利用率有点低，只穿过 1 次，这件很适合秋冬通勤的～</div>
+                <span class="chat-time">早上 7:45</span>
+              </div>
+            </div>
+          </div>
+          <div class="story-footer">
+            <span class="story-hint">💡 <span>提示</span>：基于天气、场景、衣橱数据智能推荐</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Story 4: 全家人的衣橱 -->
+      <div class="story-content" id="story-3">
+        <div class="story-card">
+          <div class="chat-container">
+            <div class="chat-message user">
+              <div class="chat-avatar user-avatar">我</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">帮我老公也录入一件外套</div>
+                <span class="chat-time">晚上 9:20</span>
+              </div>
+            </div>
+            
+            <div class="chat-message ai">
+              <div class="chat-avatar ai-avatar">🌸</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">好的～拍张照发给我吧！</div>
+                <span class="chat-time">晚上 9:20</span>
+              </div>
+            </div>
+            
+            <div class="chat-message user">
+              <div class="chat-avatar user-avatar">我</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">[图片]</div>
+                <span class="chat-time">晚上 9:21</span>
+              </div>
+            </div>
+            
+            <div class="chat-message ai">
+              <div class="chat-avatar ai-avatar">🌸</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">识别完成！这是一件 👇</div>
+                <div class="chat-card">
+                  <div class="chat-card-title">🧥 已录入老公的衣橱</div>
+                  <div class="chat-card-content">
+                    <strong>品类：</strong>外套 - 夹克<br>
+                    <strong>颜色：</strong>藏蓝色<br>
+                    <strong>季节：</strong>春秋<br>
+                    <strong>归属：</strong>老公 👨
+                  </div>
+                </div>
+                <span class="chat-time">晚上 9:21</span>
+              </div>
+            </div>
+            
+            <div class="chat-message user">
+              <div class="chat-avatar user-avatar">我</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">明天帮老公搭配一下</div>
+                <span class="chat-time">晚上 9:22</span>
+              </div>
+            </div>
+            
+            <div class="chat-message ai">
+              <div class="chat-avatar ai-avatar">🌸</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">没问题！明天早上你问我就行～<br><br>目前你管理了：<br>👩 你自己 - 37件<br>👨 老公 - 12件<br>👧 小孩 - 8件</div>
+                <span class="chat-time">晚上 9:22</span>
+              </div>
+            </div>
+            
+            <div class="chat-message user">
+              <div class="chat-avatar user-avatar">我</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">对了，明天小孩学校有活动，帮我想想穿什么</div>
+                <span class="chat-time">晚上 9:23</span>
+              </div>
+            </div>
+            
+            <div class="chat-message ai">
+              <div class="chat-avatar ai-avatar">🌸</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">好的！明天我会根据天气和活动给小朋友推荐～<br><br>记得提醒我问一下"明天小孩穿什么"哦 🌈</div>
+                <span class="chat-time">晚上 9:23</span>
+              </div>
+            </div>
+          </div>
+          <div class="story-footer">
+            <span class="story-hint">💡 <span>提示</span>：支持多人衣橱，自动识别"老公""小孩"等成员</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Story 5: 逛街参谋 -->
+      <div class="story-content" id="story-4">
+        <div class="story-card">
+          <div class="chat-container">
+            <div class="chat-message user">
+              <div class="chat-avatar user-avatar">我</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">[图片] 这件衣服怎么样？值得买吗？</div>
+                <span class="chat-time">下午 3:15</span>
+              </div>
+            </div>
+            
+            <div class="chat-message ai">
+              <div class="chat-avatar ai-avatar">🌸</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">这件是米色针织开衫对吧？让我帮你分析一下～</div>
+                <span class="chat-time">下午 3:15</span>
+              </div>
+            </div>
+            
+            <div class="chat-message ai">
+              <div class="chat-avatar ai-avatar">🌸</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">🔍 分析结果：</div>
+                <div class="chat-card">
+                  <div class="chat-card-title">🛒 购买建议</div>
+                  <div class="chat-card-content">
+                    <strong>✅ 优点：</strong><br>
+                    · 颜色百搭，适合你的衣橱<br>
+                    · 可以和你现有的3条裤子搭配<br><br>
+                    <strong>⚠️ 注意：</strong><br>
+                    · 你已有2件类似款式的开衫<br>
+                    · 利用率可能不高
+                  </div>
+                  <div class="chat-card-tags">
+                    <span class="chat-card-tag">颜色百搭</span>
+                    <span class="chat-card-tag">款式重复</span>
+                  </div>
+                </div>
+                <span class="chat-time">下午 3:16</span>
+              </div>
+            </div>
+            
+            <div class="chat-message ai">
+              <div class="chat-avatar ai-avatar">🌸</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">坦白说～这件和你衣橱里的<strong>杏色开衫</strong>很像，那件你只穿过 3 次。如果你真的很喜欢，可以买，但可能不是刚需哦 🤔</div>
+                <span class="chat-time">下午 3:16</span>
+              </div>
+            </div>
+            
+            <div class="chat-message user">
+              <div class="chat-avatar user-avatar">我</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">有道理...那我就不买了</div>
+                <span class="chat-time">下午 3:17</span>
+              </div>
+            </div>
+            
+            <div class="chat-message ai">
+              <div class="chat-avatar ai-avatar">🌸</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">省下一笔！💰<br><br>对了，根据你的衣橱分析，你真正缺的是一件<strong>黑色基础款打底衫</strong>，要不要我帮你搜一下？</div>
+                <span class="chat-time">下午 3:17</span>
+              </div>
+            </div>
+            
+            <div class="chat-message user">
+              <div class="chat-avatar user-avatar">我</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">好呀！</div>
+                <span class="chat-time">下午 3:18</span>
+              </div>
+            </div>
+          </div>
+          <div class="story-footer">
+            <span class="story-hint">💡 <span>提示</span>：拍照发给 Clothy，获取购买建议，避免冲动消费</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-container">

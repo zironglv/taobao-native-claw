@@ -120,3 +120,24 @@ document.addEventListener('DOMContentLoaded', function() {
     observer.observe(el);
   });
 });
+
+// Story tabs switch function
+function switchStory(index) {
+  // Update tabs
+  document.querySelectorAll('.story-tab').forEach(function(tab, i) {
+    if (i === index) {
+      tab.classList.add('active');
+    } else {
+      tab.classList.remove('active');
+    }
+  });
+  
+  // Update content
+  document.querySelectorAll('.story-content').forEach(function(content, i) {
+    if (i === index) {
+      content.classList.add('active');
+    } else {
+      content.classList.remove('active');
+    }
+  });
+}
