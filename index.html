@@ -358,18 +358,26 @@
       </div>
       
       <div class="story-tabs">
-        <button class="story-tab active" onclick="switchStory(0)">第一次见面</button>
-        <button class="story-tab" onclick="switchStory(1)">衣橱数字化</button>
-        <button class="story-tab" onclick="switchStory(2)">每天早上</button>
-        <button class="story-tab" onclick="switchStory(3)">全家人的衣橱</button>
-        <button class="story-tab" onclick="switchStory(4)">逛街参谋</button>
-        <button class="story-tab" onclick="switchStory(5)">换季整理</button>
-        <button class="story-tab" onclick="switchStory(6)">出差旅行</button>
-        <button class="story-tab" onclick="switchStory(7)">店铺上新</button>
+        <div class="story-categories">
+          <button class="story-category active" onclick="filterCategory('all')">全部</button>
+          <button class="story-category" onclick="filterCategory('wardrobe')">衣橱管理</button>
+          <button class="story-category" onclick="filterCategory('outfit')">智能穿搭</button>
+          <button class="story-category" onclick="filterCategory('shopping')">购物参谋</button>
+        </div>
+        <div class="story-scenes">
+          <button class="story-tab active" data-category="wardrobe" onclick="switchStory(0)">第一次见面</button>
+          <button class="story-tab" data-category="wardrobe" onclick="switchStory(1)">衣橱数字化</button>
+          <button class="story-tab" data-category="outfit" onclick="switchStory(2)">每天早上</button>
+          <button class="story-tab" data-category="wardrobe" onclick="switchStory(3)">全家人的衣橱</button>
+          <button class="story-tab" data-category="shopping" onclick="switchStory(4)">逛街参谋</button>
+          <button class="story-tab" data-category="wardrobe" onclick="switchStory(5)">换季整理</button>
+          <button class="story-tab" data-category="outfit" onclick="switchStory(6)">出差旅行</button>
+          <button class="story-tab" data-category="shopping" onclick="switchStory(7)">店铺上新</button>
+        </div>
       </div>
       
       <!-- Story 1: 第一次见面 -->
-      <div class="story-content active" id="story-0">
+      <div class="story-content active" id="story-0" data-category="wardrobe">
         <div class="story-card">
           <div class="chat-container">
             <div class="chat-message user">
@@ -455,7 +463,7 @@
       </div>
       
       <!-- Story 2: 衣橱数字化 -->
-      <div class="story-content" id="story-1">
+      <div class="story-content" id="story-1" data-category="wardrobe">
         <div class="story-card">
           <div class="chat-container">
             <div class="chat-message user">
@@ -529,7 +537,7 @@
       </div>
       
       <!-- Story 3: 每天早上 -->
-      <div class="story-content" id="story-2">
+      <div class="story-content" id="story-2" data-category="outfit">
         <div class="story-card">
           <div class="chat-container">
             <div class="chat-message user">
@@ -655,7 +663,7 @@
       </div>
       
       <!-- Story 4: 全家人的衣橱 -->
-      <div class="story-content" id="story-3">
+      <div class="story-content" id="story-3" data-category="wardrobe">
         <div class="story-card">
           <div class="chat-container">
             <div class="chat-message user">
@@ -738,7 +746,7 @@
       </div>
       
       <!-- Story 5: 逛街参谋 -->
-      <div class="story-content" id="story-4">
+      <div class="story-content" id="story-4" data-category="shopping">
         <div class="story-card">
           <div class="chat-container">
             <div class="chat-message user">
@@ -819,7 +827,7 @@
       </div>
       
       <!-- Story 6: 换季整理 -->
-      <div class="story-content" id="story-5">
+      <div class="story-content" id="story-5" data-category="wardrobe">
         <div class="story-card">
           <div class="chat-container">
             <div class="chat-message user">
@@ -898,7 +906,7 @@
       </div>
       
       <!-- Story 7: 出差旅行 -->
-      <div class="story-content" id="story-6">
+      <div class="story-content" id="story-6" data-category="outfit">
         <div class="story-card">
           <div class="chat-container">
             <div class="chat-message user">
@@ -974,7 +982,7 @@
       </div>
       
       <!-- Story 8: 店铺上新智能推荐 -->
-      <div class="story-content" id="story-7">
+      <div class="story-content" id="story-7" data-category="shopping">
         <div class="story-card">
           <div class="chat-container">
             <div class="chat-message ai">

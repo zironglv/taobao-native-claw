@@ -633,9 +633,45 @@ body {
 /* Story Tabs */
 .story-tabs {
   display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.story-categories {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.story-category {
+  padding: 8px 20px;
+  background: var(--white);
+  border: 1px solid var(--tb-border);
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--tb-text-light);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.story-category:hover {
+  border-color: var(--tb-orange);
+  color: var(--tb-orange);
+}
+
+.story-category.active {
+  background: var(--tb-orange);
+  border-color: var(--tb-orange);
+  color: white;
+}
+
+.story-scenes {
+  display: flex;
   justify-content: center;
   gap: 12px;
-  margin-bottom: 32px;
   flex-wrap: wrap;
 }
 

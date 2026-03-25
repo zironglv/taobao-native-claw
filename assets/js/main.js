@@ -141,3 +141,45 @@ function switchStory(index) {
     }
   });
 }
+
+// Filter by category
+function filterCategory(category) {
+  // Update category buttons
+  document.querySelectorAll('.story-category').forEach(function(btn) {
+    btn.classList.remove('active');
+  });
+  event.target.classList.add('active');
+  
+  // Filter tabs
+  document.querySelectorAll('.story-tab').forEach(function(tab) {
+    if (category === 'all' || tab.dataset.category === category) {
+      tab.style.display = 'inline-block';
+    } else {
+      tab.style.display = 'none';
+    }
+  });
+  
+  // Filter content and find first visible
+  let firstVisibleIndex = -1;
+  document.querySelectorAll('.story-content').forEach(function(content, i) {
+    if (category === 'all' || content.dataset.category === category) {
+      if (firstVisibleIndex === -1) {
+        firstVisibleIndex = i;
+        content.classList.add('active');
+      } else {
+        content.classList.remove('active');
+      }
+    } else {
+      content.classList.remove('active');
+    }
+  });
+  
+  // Update tab active state
+  document.querySelectorAll('.story-tab').forEach(function(tab, i) {
+    if (i === firstVisibleIndex) {
+      tab.classList.add('active');
+    } else {
+      tab.classList.remove('active');
+    }
+  });
+}
