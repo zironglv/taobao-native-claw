@@ -363,6 +363,9 @@
         <button class="story-tab" onclick="switchStory(2)">每天早上</button>
         <button class="story-tab" onclick="switchStory(3)">全家人的衣橱</button>
         <button class="story-tab" onclick="switchStory(4)">逛街参谋</button>
+        <button class="story-tab" onclick="switchStory(5)">换季整理</button>
+        <button class="story-tab" onclick="switchStory(6)">出差旅行</button>
+        <button class="story-tab" onclick="switchStory(7)">店铺上新</button>
       </div>
       
       <!-- Story 1: 第一次见面 -->
@@ -557,18 +560,56 @@
               <div class="chat-avatar ai-avatar">🌸</div>
               <div class="chat-bubble-wrapper">
                 <div class="chat-bubble">推荐你今天这样穿 👇</div>
-                <div class="chat-card">
-                  <div class="chat-card-title">👔 今日穿搭 · 通勤风</div>
-                  <div class="chat-card-content">
-                    <strong>上衣：</strong>米色针织衫（已穿过2次）<br>
-                    <strong>下装：</strong>深蓝色直筒牛仔裤<br>
-                    <strong>外套：</strong>卡其色风衣<br>
-                    <strong>鞋子：</strong>白色帆布鞋
+                <!-- 穿搭组合图 -->
+                <div class="outfit-combo">
+                  <div class="outfit-items">
+                    <div class="outfit-item">
+                      <div class="outfit-img" style="background: linear-gradient(135deg, #F5E6D3 0%, #E8D4C0 100%);">
+                        <span class="outfit-emoji">👕</span>
+                      </div>
+                      <span class="outfit-label">米色针织衫</span>
+                    </div>
+                    <div class="outfit-item">
+                      <div class="outfit-img" style="background: linear-gradient(135deg, #2C3E50 0%, #1a252f 100%);">
+                        <span class="outfit-emoji">👖</span>
+                      </div>
+                      <span class="outfit-label">深蓝牛仔裤</span>
+                    </div>
+                    <div class="outfit-item">
+                      <div class="outfit-img" style="background: linear-gradient(135deg, #C4A77D 0%, #A0805D 100%);">
+                        <span class="outfit-emoji">🧥</span>
+                      </div>
+                      <span class="outfit-label">卡其风衣</span>
+                    </div>
+                    <div class="outfit-item">
+                      <div class="outfit-img" style="background: linear-gradient(135deg, #FFFFFF 0%, #F0F0F0 100%);">
+                        <span class="outfit-emoji">👟</span>
+                      </div>
+                      <span class="outfit-label">白色帆布鞋</span>
+                    </div>
                   </div>
-                  <div class="chat-card-tags">
-                    <span class="chat-card-tag">18°C 适合</span>
-                    <span class="chat-card-tag">通勤</span>
-                    <span class="chat-card-tag">轻熟风</span>
+                  <div class="outfit-preview">
+                    <div class="outfit-avatar">
+                      <svg viewBox="0 0 120 200" class="avatar-svg">
+                        <!-- 头部 -->
+                        <circle cx="60" cy="25" r="20" fill="#FFDAB9"/>
+                        <!-- 头发 -->
+                        <ellipse cx="60" cy="18" rx="22" ry="15" fill="#4A3728"/>
+                        <!-- 身体 - 风衣 -->
+                        <path d="M30 50 L35 140 L85 140 L90 50 Q60 45 30 50" fill="#C4A77D"/>
+                        <!-- 内搭 - 针织衫领口 -->
+                        <path d="M50 50 L60 60 L70 50" fill="#F5E6D3" stroke="#E8D4C0" stroke-width="2"/>
+                        <!-- 裤子 -->
+                        <path d="M35 140 L38 195 L52 195 L55 150 L65 150 L68 195 L82 195 L85 140" fill="#2C3E50"/>
+                        <!-- 鞋子 -->
+                        <ellipse cx="45" cy="198" rx="12" ry="5" fill="#FFFFFF" stroke="#E0E0E0"/>
+                        <ellipse cx="75" cy="198" rx="12" ry="5" fill="#FFFFFF" stroke="#E0E0E0"/>
+                      </svg>
+                    </div>
+                    <div class="outfit-info">
+                      <span class="outfit-style">通勤轻熟风</span>
+                      <span class="outfit-temp">🌡️ 18°C 适合</span>
+                    </div>
                   </div>
                 </div>
                 <span class="chat-time">早上 7:43</span>
@@ -608,7 +649,7 @@
             </div>
           </div>
           <div class="story-footer">
-            <span class="story-hint">💡 <span>提示</span>：基于天气、场景、衣橱数据智能推荐</span>
+            <span class="story-hint">💡 <span>提示</span>：基于天气、场景、衣橱数据智能推荐，可视化展示搭配效果</span>
           </div>
         </div>
       </div>
@@ -776,8 +817,226 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
+      
+      <!-- Story 6: 换季整理 -->
+      <div class="story-content" id="story-5">
+        <div class="story-card">
+          <div class="chat-container">
+            <div class="chat-message user">
+              <div class="chat-avatar user-avatar">我</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">春天来了，帮我看看哪些衣服该收起来了</div>
+                <span class="chat-time">周六 10:15</span>
+              </div>
+            </div>
+            
+            <div class="chat-message ai">
+              <div class="chat-avatar ai-avatar">🌸</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">好的！让我帮你分析一下你的衣橱～</div>
+                <span class="chat-time">周六 10:15</span>
+              </div>
+            </div>
+            
+            <div class="chat-message ai">
+              <div class="chat-avatar ai-avatar">🌸</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">🧹 换季整理建议来啦！</div>
+                <div class="chat-card">
+                  <div class="chat-card-title">📦 可以收纳的单品（冬季）</div>
+                  <div class="chat-card-content">
+                    <strong>羽绒服：</strong>2 件 - 羽绒服收纳袋<br>
+                    <strong>厚毛衣：</strong>3 件 - 真空压缩袋<br>
+                    <strong>加绒裤：</strong>2 条 - 折叠收纳<br>
+                    <strong>雪地靴：</strong>1 双 - 鞋盒收纳
+                  </div>
+                  <div class="chat-card-tags">
+                    <span class="chat-card-tag">8件可收纳</span>
+                    <span class="chat-card-tag">节省空间 60%</span>
+                  </div>
+                </div>
+                <span class="chat-time">周六 10:16</span>
+              </div>
+            </div>
+            
+            <div class="chat-message ai">
+              <div class="chat-avatar ai-avatar">🌸</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">另外，我发现有几件冬装你<strong>整个冬天都没穿过</strong>：</div>
+                <div class="chat-card">
+                  <div class="chat-card-title">⚠️ 穿搭提醒</div>
+                  <div class="chat-card-content">
+                    <strong>灰色毛呢大衣</strong> - 0 次穿着<br>
+                    <strong>酒红色毛衣</strong> - 0 次穿着<br><br>
+                    要不要考虑出二手或者捐赠？这样衣橱更清爽～
+                  </div>
+                </div>
+                <span class="chat-time">周六 10:16</span>
+              </div>
+            </div>
+            
+            <div class="chat-message user">
+              <div class="chat-avatar user-avatar">我</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">那个酒红色毛衣...当初买来想过年会穿，结果没穿上</div>
+                <span class="chat-time">周六 10:17</span>
+              </div>
+            </div>
+            
+            <div class="chat-message ai">
+              <div class="chat-avatar ai-avatar">🌸</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">哈哈，这种"特殊场合才穿"的衣服最容易吃灰 😅<br><br>下次买衣服我提醒你，优先买能日常穿的单品～</div>
+                <span class="chat-time">周六 10:17</span>
+              </div>
+            </div>
+          </div>
+          <div class="story-footer">
+            <span class="story-hint">💡 <span>提示</span>：换季时自动提醒收纳，识别长期不穿的单品</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Story 7: 出差旅行 -->
+      <div class="story-content" id="story-6">
+        <div class="story-card">
+          <div class="chat-container">
+            <div class="chat-message user">
+              <div class="chat-avatar user-avatar">我</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">下周去北京出差3天，帮我搭配几套</div>
+                <span class="chat-time">周日 20:30</span>
+              </div>
+            </div>
+            
+            <div class="chat-message ai">
+              <div class="chat-avatar ai-avatar">🌸</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">好的！北京下周天气如何，让我看看～<br><br>📍 北京 3天天气：8-15°C，有两天可能有小雨</div>
+                <span class="chat-time">周日 20:30</span>
+              </div>
+            </div>
+            
+            <div class="chat-message ai">
+              <div class="chat-avatar ai-avatar">🌸</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">🧳 出差穿搭方案来啦！</div>
+                <div class="chat-card">
+                  <div class="chat-card-title">👔 Day 1 - 会议日</div>
+                  <div class="chat-card-content">
+                    黑色西装外套 + 白色衬衫 + 深色西裤 + 乐福鞋
+                  </div>
+                </div>
+                <div class="chat-card">
+                  <div class="chat-card-title">👔 Day 2 - 客户拜访</div>
+                  <div class="chat-card-content">
+                    卡其风衣 + 米色针织衫 + 黑色直筒裤 + 小白鞋
+                  </div>
+                </div>
+                <div class="chat-card">
+                  <div class="chat-card-title">👔 Day 3 - 返程</div>
+                  <div class="chat-card-content">
+                    灰色卫衣 + 牛仔裤 + 运动鞋（舒适为主）
+                  </div>
+                </div>
+                <span class="chat-time">周日 20:31</span>
+              </div>
+            </div>
+            
+            <div class="chat-message ai">
+              <div class="chat-avatar ai-avatar">🌸</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">💡 小贴士：<br>• 带把折叠伞，有两天可能下雨<br>• 外套选防风材质，北京风大<br>• 这3套衣服可以混搭，外套带1件就够了</div>
+                <span class="chat-time">周日 20:31</span>
+              </div>
+            </div>
+            
+            <div class="chat-message user">
+              <div class="chat-avatar user-avatar">我</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">太棒了！省得我自己想了</div>
+                <span class="chat-time">周日 20:32</span>
+              </div>
+            </div>
+            
+            <div class="chat-message ai">
+              <div class="chat-avatar ai-avatar">🌸</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">不客气～回来记得告诉我哪些搭配好穿，我帮你记录下来，下次出差还能参考 ✈️</div>
+                <span class="chat-time">周日 20:32</span>
+              </div>
+            </div>
+          </div>
+          <div class="story-footer">
+            <span class="story-hint">💡 <span>提示</span>：根据目的地天气+行程天数，智能规划穿搭方案</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Story 8: 店铺上新智能推荐 -->
+      <div class="story-content" id="story-7">
+        <div class="story-card">
+          <div class="chat-container">
+            <div class="chat-message ai">
+              <div class="chat-avatar ai-avatar">🌸</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">你关注的「优衣库」上新了 15 件新品，我来帮你筛选一下～</div>
+                <span class="chat-time">下午 2:00</span>
+              </div>
+            </div>
+            
+            <div class="chat-message ai">
+              <div class="chat-avatar ai-avatar">🌸</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">🔍 根据你的风格偏好筛选完成：</div>
+                <div class="chat-card">
+                  <div class="chat-card-title">✅ 推荐单品（3件）</div>
+                  <div class="chat-card-content">
+                    <strong>1. 米色长款风衣</strong> - ¥599<br>
+                    <small style="color:#888;">→ 符合你的轻熟通勤风格<br>→ 能和你现有的 3 条裤子搭配<br>→ 正好补充你缺少的秋季外套</small><br><br>
+                    <strong>2. 黑色高领打底衫</strong> - ¥149<br>
+                    <small style="color:#888;">→ 你衣橱缺的基础款<br>→ 可搭配率高，利用率会很高</small><br><br>
+                    <strong>3. 深灰色阔腿裤</strong> - ¥299<br>
+                    <small style="color:#888;">→ 和你的通勤风格很搭<br>→ 秋冬都能穿</small>
+                  </div>
+                  <div class="chat-card-tags">
+                    <span class="chat-card-tag">匹配度高</span>
+                    <span class="chat-card-tag">可搭配现有衣橱</span>
+                  </div>
+                </div>
+                <span class="chat-time">下午 2:01</span>
+              </div>
+            </div>
+            
+            <div class="chat-message ai">
+              <div class="chat-avatar ai-avatar">🌸</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">❌ 不太适合你的（12件）<br><br>大多是甜美风/亮色系，和你的休闲轻熟风格不太搭。比如那件粉色蕾丝衬衫，可爱但不是你的风格～</div>
+                <span class="chat-time">下午 2:01</span>
+              </div>
+            </div>
+            
+            <div class="chat-message user">
+              <div class="chat-avatar user-avatar">我</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">那个风衣确实不错，我一直想买一件</div>
+                <span class="chat-time">下午 2:03</span>
+              </div>
+            </div>
+            
+            <div class="chat-message ai">
+              <div class="chat-avatar ai-avatar">🌸</div>
+              <div class="chat-bubble-wrapper">
+                <div class="chat-bubble">那这件很值得入手！🛒<br><br>而且你衣橱里现在只有 1 件风衣，利用率挺高的。要不要我帮你加入购物车？</div>
+                <span class="chat-time">下午 2:03</span>
+              </div>
+            </div>
+          </div>
+          <div class="story-footer">
+            <span class="story-hint">💡 <span>提示</span>：关注店铺上新后，自动筛选适合你的单品，省时省心</span>
+          </div>
+        </div>
+      </div>
 
   <!-- Footer -->
   <footer class="footer">
