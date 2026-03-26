@@ -145,7 +145,10 @@ function switchStory(index) {
 // Scroll to story slide
 function scrollToStory(index) {
   const slider = document.getElementById('storySlider');
+  if (!slider) return;
+  
   const slides = slider.querySelectorAll('.story-slide');
+  const slideStyle = window.getComputedStyle(slides[0]);
   const slideWidth = slides[0].offsetWidth + 20; // width + gap
   
   // Update tabs
