@@ -1204,111 +1204,37 @@ body {
   color: #666;
 }
 
-/* Stories Intro - 紧凑版 */
+/* Stories Intro - 简洁一行 */
 .stories-intro {
   background: linear-gradient(135deg, #FFF5F0 0%, #fff 100%);
-  border-radius: 12px;
-  padding: 16px 20px;
-  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
   border: 1px solid #FFE4DC;
 }
 
-.intro-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.intro-text {
-  flex: 1;
-  min-width: 250px;
-}
-
-.intro-badge {
-  display: inline-block;
-  background: var(--tb-orange);
-  color: white;
-  padding: 3px 10px;
-  border-radius: 12px;
-  font-size: 12px;
-  font-weight: 500;
-  margin-bottom: 8px;
-}
-
-.intro-text p {
+.stories-intro p {
   margin: 0;
   font-size: 14px;
   color: var(--tb-text-light);
+  line-height: 1.6;
 }
 
-.intro-action {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 8px;
-}
-
-.action-hint {
-  font-size: 13px;
+.stories-intro a {
   color: var(--tb-orange);
-}
-
-.skill-buttons {
-  display: flex;
-  gap: 10px;
-}
-
-.skill-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 13px;
-  font-weight: 500;
   text-decoration: none;
-  transition: all 0.2s;
-  background: white;
-  border: 1px solid var(--tb-border);
-  color: var(--tb-text);
 }
 
-.skill-btn:hover {
-  border-color: var(--tb-orange);
-  box-shadow: 0 2px 8px rgba(255, 80, 0, 0.1);
+.stories-intro a:hover {
+  text-decoration: underline;
 }
 
-.skill-btn.primary {
-  background: var(--tb-orange);
-  border-color: var(--tb-orange);
-  color: white;
-}
-
-.skill-btn.primary:hover {
-  background: #e64a00;
-}
-
-@media (max-width: 600px) {
-  .intro-content {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .intro-action {
-    align-items: flex-start;
-    width: 100%;
-  }
-  
-  .skill-buttons {
-    width: 100%;
-  }
-  
-  .skill-btn {
-    flex: 1;
-    justify-content: center;
-  }
+/* 场景区域标签 */
+.story-section-label {
+  font-size: 13px;
+  color: var(--tb-text-light);
+  margin-bottom: 10px;
+  padding-left: 4px;
 }
 
 /* Responsive */
@@ -1505,111 +1431,37 @@ body {
   color: var(--tb-text-light);
 }
 
-/* Stories Intro - 紧凑版 */
+/* Stories Intro - 简洁一行 */
 .stories-intro {
   background: linear-gradient(135deg, #FFF5F0 0%, #fff 100%);
-  border-radius: 12px;
-  padding: 16px 20px;
-  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
   border: 1px solid #FFE4DC;
 }
 
-.intro-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.intro-text {
-  flex: 1;
-  min-width: 250px;
-}
-
-.intro-badge {
-  display: inline-block;
-  background: var(--tb-orange);
-  color: white;
-  padding: 3px 10px;
-  border-radius: 12px;
-  font-size: 12px;
-  font-weight: 500;
-  margin-bottom: 8px;
-}
-
-.intro-text p {
+.stories-intro p {
   margin: 0;
   font-size: 14px;
   color: var(--tb-text-light);
+  line-height: 1.6;
 }
 
-.intro-action {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 8px;
-}
-
-.action-hint {
-  font-size: 13px;
+.stories-intro a {
   color: var(--tb-orange);
-}
-
-.skill-buttons {
-  display: flex;
-  gap: 10px;
-}
-
-.skill-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 13px;
-  font-weight: 500;
   text-decoration: none;
-  transition: all 0.2s;
-  background: white;
-  border: 1px solid var(--tb-border);
-  color: var(--tb-text);
 }
 
-.skill-btn:hover {
-  border-color: var(--tb-orange);
-  box-shadow: 0 2px 8px rgba(255, 80, 0, 0.1);
+.stories-intro a:hover {
+  text-decoration: underline;
 }
 
-.skill-btn.primary {
-  background: var(--tb-orange);
-  border-color: var(--tb-orange);
-  color: white;
-}
-
-.skill-btn.primary:hover {
-  background: #e64a00;
-}
-
-@media (max-width: 600px) {
-  .intro-content {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .intro-action {
-    align-items: flex-start;
-    width: 100%;
-  }
-  
-  .skill-buttons {
-    width: 100%;
-  }
-  
-  .skill-btn {
-    flex: 1;
-    justify-content: center;
-  }
+/* 场景区域标签 */
+.story-section-label {
+  font-size: 13px;
+  color: var(--tb-text-light);
+  margin-bottom: 10px;
+  padding-left: 4px;
 }
 
 /* Responsive */
