@@ -711,6 +711,9 @@ body {
   border: 1px solid var(--tb-border);
   overflow: hidden;
   transition: all 0.3s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .story-card:hover {
@@ -764,6 +767,7 @@ body {
   gap: 12px;
   height: 380px;
   overflow-y: auto;
+  flex: 1;
 }
 
 .chat-msg {
