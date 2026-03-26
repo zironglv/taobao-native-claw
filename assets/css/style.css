@@ -562,7 +562,7 @@ body {
 }
 
 .stories-container {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -630,340 +630,177 @@ body {
   margin: 0 auto;
 }
 
-/* Story Tabs */
-.story-tabs {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-bottom: 32px;
+/* Story Grid - 5个场景卡片 */
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 24px;
 }
 
-.story-categories {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.story-category {
-  padding: 8px 20px;
-  background: var(--white);
-  border: 1px solid var(--tb-border);
-  border-radius: 20px;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--tb-text-light);
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.story-category:hover {
-  border-color: var(--tb-orange);
-  color: var(--tb-orange);
-}
-
-.story-category.active {
-  background: var(--tb-orange);
-  border-color: var(--tb-orange);
-  color: white;
-}
-
-.story-scenes {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.story-tab {
-  padding: 10px 20px;
-  background: var(--white);
-  border: 1px solid var(--tb-border);
-  border-radius: 24px;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--tb-text-light);
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.story-tab:hover {
-  border-color: var(--tb-orange);
-  color: var(--tb-orange);
-}
-
-.story-tab.active {
-  background: var(--tb-orange);
-  border-color: var(--tb-orange);
-  color: white;
-}
-
-/* Story Content */
-.story-content {
-  display: none;
-}
-
-.story-content.active {
-  display: block;
-}
-
+/* Story Card */
 .story-card {
   background: var(--white);
-  border-radius: 20px;
+  border-radius: 16px;
   border: 1px solid var(--tb-border);
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(255, 80, 0, 0.05);
+  transition: all 0.3s;
 }
 
-/* Chat Container */
-.chat-container {
-  padding: 24px;
+.story-card:hover {
+  border-color: var(--tb-orange);
+  box-shadow: 0 8px 24px rgba(255, 80, 0, 0.1);
+}
+
+.story-card-header {
+  padding: 16px 20px;
+  background: linear-gradient(135deg, #FFF5F0, #FFFFFF);
+  border-bottom: 1px solid var(--tb-border);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.story-number {
+  width: 28px;
+  height: 28px;
+  background: var(--tb-orange);
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.story-card-header h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--tb-text);
+  margin: 0;
+}
+
+/* Story Dialogs - 两列对话 */
+.story-dialogs {
+  padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  min-height: 400px;
-  max-height: 500px;
-  overflow-y: auto;
 }
 
-/* Chat Messages */
-.chat-message {
+.dialog-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.dialog-user, .dialog-ai {
   display: flex;
-  gap: 12px;
-  max-width: 85%;
+  gap: 10px;
 }
 
-.chat-message.user {
-  flex-direction: row-reverse;
-  align-self: flex-end;
-}
-
-.chat-message.ai {
-  align-self: flex-start;
-}
-
-.chat-avatar {
-  width: 36px;
-  height: 36px;
+.dialog-avatar {
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
-}
-
-.chat-avatar.ai-avatar {
-  background: linear-gradient(135deg, #FFE4DC, #FFD0C0);
-}
-
-.chat-avatar.user-avatar {
-  background: linear-gradient(135deg, var(--tb-orange), var(--tb-orange-light));
-  color: white;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
 }
 
-.chat-bubble-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+.dialog-user .dialog-avatar {
+  background: linear-gradient(135deg, var(--tb-orange), var(--tb-orange-light));
+  color: white;
 }
 
-.chat-bubble {
-  padding: 14px 18px;
-  border-radius: 18px;
-  font-size: 15px;
+.dialog-ai .dialog-avatar {
+  background: linear-gradient(135deg, #FFE4DC, #FFD0C0);
+  font-size: 16px;
+}
+
+.dialog-content {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 14px;
   line-height: 1.6;
 }
 
-.chat-message.ai .chat-bubble {
-  background: #F7F7F7;
-  color: var(--tb-text);
-  border-bottom-left-radius: 4px;
-}
-
-.chat-message.user .chat-bubble {
-  background: linear-gradient(135deg, var(--tb-orange), var(--tb-orange-light));
-  color: white;
-  border-bottom-right-radius: 4px;
-}
-
-.chat-time {
-  font-size: 11px;
-  color: #999;
-  padding: 0 4px;
-}
-
-.chat-message.user .chat-time {
-  text-align: right;
-}
-
-/* Chat Typing Indicator */
-.chat-typing {
-  display: flex;
-  gap: 4px;
-  padding: 14px 18px;
-  background: #F7F7F7;
-  border-radius: 18px;
-  border-bottom-left-radius: 4px;
-}
-
-.chat-typing span {
-  width: 8px;
-  height: 8px;
-  background: #ccc;
-  border-radius: 50%;
-  animation: typing 1.4s infinite;
-}
-
-.chat-typing span:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.chat-typing span:nth-child(3) {
-  animation-delay: 0.4s;
-}
-
-@keyframes typing {
-  0%, 60%, 100% {
-    transform: translateY(0);
-    opacity: 0.4;
-  }
-  30% {
-    transform: translateY(-4px);
-    opacity: 1;
-  }
-}
-
-/* Chat Image */
-.chat-image {
-  max-width: 200px;
-  border-radius: 12px;
-  margin-top: 8px;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.chat-image:hover {
-  transform: scale(1.02);
-}
-
-/* Chat Card */
-.chat-card {
-  background: var(--white);
-  border: 1px solid #E5E5E5;
-  border-radius: 12px;
-  padding: 16px;
-  margin-top: 12px;
-  max-width: 280px;
-}
-
-.chat-card-title {
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 8px;
+.dialog-user .dialog-content {
+  background: #F5F5F5;
   color: var(--tb-text);
 }
 
-.chat-card-content {
+.dialog-ai .dialog-content {
+  background: #FFF5F0;
+  color: var(--tb-text);
+  border: 1px solid #FFE4DC;
+}
+
+.dialog-content p {
+  margin: 0 0 8px 0;
+}
+
+.dialog-content p:last-child {
+  margin-bottom: 0;
+}
+
+.dialog-note {
+  padding: 10px 12px;
+  background: rgba(255, 80, 0, 0.05);
+  border-radius: 8px;
   font-size: 13px;
-  color: var(--tb-text-light);
+  margin-top: 8px;
 }
 
-.chat-card-tags {
+.dialog-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
   margin-top: 10px;
 }
 
-.chat-card-tag {
+.dialog-tags span {
   padding: 4px 10px;
-  background: #FFF5F0;
+  background: white;
+  border: 1px solid var(--tb-orange);
   color: var(--tb-orange);
   border-radius: 12px;
   font-size: 12px;
 }
 
-/* Outfit Combo */
-.outfit-combo {
-  background: var(--white);
-  border: 1px solid #E5E5E5;
-  border-radius: 12px;
-  padding: 16px;
-  margin-top: 12px;
-  max-width: 320px;
+/* Outfit Mini - 穿搭组合迷你版 */
+.outfit-mini {
+  margin-top: 10px;
 }
 
-.outfit-items {
+.outfit-items-mini {
   display: flex;
-  gap: 10px;
-  margin-bottom: 16px;
-  justify-content: center;
-}
-
-.outfit-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   gap: 6px;
 }
 
-.outfit-img {
-  width: 56px;
-  height: 56px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-
-.outfit-emoji {
-  font-size: 24px;
-}
-
-.outfit-label {
-  font-size: 11px;
-  color: var(--tb-text-light);
-  white-space: nowrap;
-}
-
-.outfit-preview {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding-top: 12px;
-  border-top: 1px dashed #E5E5E5;
-}
-
-.outfit-avatar {
-  width: 80px;
-  height: 140px;
-  flex-shrink: 0;
-}
-
-.avatar-svg {
-  width: 100%;
-  height: 100%;
-}
-
-.outfit-info {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.outfit-style {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--tb-text);
-}
-
-.outfit-temp {
+.outfit-piece {
+  padding: 6px 10px;
+  border-radius: 8px;
   font-size: 12px;
-  color: var(--tb-text-light);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .story-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .dialog-row {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Story Footer */
