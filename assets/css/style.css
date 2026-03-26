@@ -472,27 +472,7 @@ body {
   min-height: 240px;
 }
 
-.chat-bubble {
-  padding: 12px 16px;
-  border-radius: 16px;
-  font-size: 14px;
-  line-height: 1.6;
-  max-width: 90%;
-}
-
-.chat-user {
-  background: linear-gradient(135deg, var(--tb-orange), var(--tb-orange-light));
-  color: white;
-  align-self: flex-end;
-  border-bottom-right-radius: 4px;
-}
-
-.chat-ai {
-  background: #F5F5F5;
-  color: var(--tb-text);
-  align-self: flex-start;
-  border-bottom-left-radius: 4px;
-}
+/* 用户故事 - 聊天样式 (新) */
 
 /* FAQ */
 .faq {
