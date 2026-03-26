@@ -357,68 +357,209 @@
         <p>拍照录入衣橱、智能推荐搭配、逛街种草咨询，支持多人衣橱管理，全家穿搭一个 Skill 搞定</p>
       </div>
       
-      <!-- 5个精选场景，每个场景两列布局 -->
-      <div class="story-grid">
-        
-        <!-- 场景1：第一次见面 -->
-        <div class="story-card">
-          <div class="story-card-header">
-            <span class="story-number">01</span>
-            <h4>第一次见面</h4>
-          </div>
-          <div class="story-dialogs">
-            <div class="dialog-row">
-              <div class="dialog-user">
-                <span class="dialog-avatar">我</span>
-                <div class="dialog-content">
-                  <p>你好！</p>
-                </div>
+      <!-- 5个精选场景 -->
+      <div class="story-tabs">
+        <button class="story-tab active" onclick="scrollToStory(0)">第一次见面</button>
+        <button class="story-tab" onclick="scrollToStory(1)">每天早上</button>
+        <button class="story-tab" onclick="scrollToStory(2)">全家人的衣橱</button>
+        <button class="story-tab" onclick="scrollToStory(3)">逛街参谋</button>
+        <button class="story-tab" onclick="scrollToStory(4)">店铺上新</button>
+      </div>
+      
+      <div class="story-slider-wrapper">
+        <div class="story-slider" id="storySlider">
+          
+          <!-- 场景1：第一次见面 -->
+          <div class="story-slide" id="story-0">
+            <div class="story-card">
+              <div class="story-card-header">
+                <span class="story-number">01</span>
+                <h4>第一次见面</h4>
+                <span class="story-category-tag">新手入门</span>
               </div>
-              <div class="dialog-ai">
-                <span class="dialog-avatar">🌸</span>
-                <div class="dialog-content">
-                  <p>嗨～我是 Clothy，你的 AI 穿搭闺蜜！我可以帮你管理衣橱、推荐每日穿搭、逛街时给你参谋。先让我认识一下你吧～你平时喜欢什么风格？</p>
+              <div class="story-chat">
+                <div class="chat-msg ai">
+                  <div class="chat-avatar">🌸</div>
+                  <div class="chat-bubble">嗨～我是 Clothy，你的 AI 穿搭闺蜜！我可以帮你管理衣橱、推荐每日穿搭、逛街时给你参谋。先让我认识一下你吧～你平时喜欢什么风格？</div>
                 </div>
-              </div>
-            </div>
-            <div class="dialog-row">
-              <div class="dialog-user">
-                <span class="dialog-avatar">我</span>
-                <div class="dialog-content">
-                  <p>平时上班穿得简单点，周末会想打扮一下，算休闲+轻熟？</p>
+                <div class="chat-msg user">
+                  <div class="chat-avatar">我</div>
+                  <div class="chat-bubble">平时上班穿得简单点，周末会想打扮一下，算休闲+轻熟？</div>
                 </div>
-              </div>
-              <div class="dialog-ai">
-                <span class="dialog-avatar">🌸</span>
-                <div class="dialog-content">
-                  <p>收到！休闲+轻熟，懂了～</p>
-                  <div class="dialog-tags">
-                    <span>✅ 风格偏好已记录</span>
-                    <span>✅ 可导入淘宝订单</span>
+                <div class="chat-msg ai">
+                  <div class="chat-avatar">🌸</div>
+                  <div class="chat-bubble">
+                    收到！休闲+轻熟，懂了～
+                    <div class="chat-tags">
+                      <span>✅ 风格偏好已记录</span>
+                      <span>✅ 可导入淘宝订单</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        
-        <!-- 场景2：每天早上 -->
-        <div class="story-card">
-          <div class="story-card-header">
-            <span class="story-number">02</span>
-            <h4>每天早上</h4>
-          </div>
-          <div class="story-dialogs">
-            <div class="dialog-row">
-              <div class="dialog-user">
-                <span class="dialog-avatar">我</span>
-                <div class="dialog-content">
-                  <p>今天穿什么？</p>
+          
+          <!-- 场景2：每天早上 -->
+          <div class="story-slide" id="story-1">
+            <div class="story-card">
+              <div class="story-card-header">
+                <span class="story-number">02</span>
+                <h4>每天早上</h4>
+                <span class="story-category-tag">智能穿搭</span>
+              </div>
+              <div class="story-chat">
+                <div class="chat-msg user">
+                  <div class="chat-avatar">我</div>
+                  <div class="chat-bubble">今天穿什么？</div>
+                </div>
+                <div class="chat-msg ai">
+                  <div class="chat-avatar">🌸</div>
+                  <div class="chat-bubble">
+                    早上好！今天杭州 18°C，多云，适合穿薄外套。推荐你今天这样穿：
+                    <div class="chat-outfit">
+                      <span class="outfit-item" style="background:#F5E6D3">👕 米色针织衫</span>
+                      <span class="outfit-item" style="background:#2C3E50;color:#fff">👖 深蓝牛仔裤</span>
+                      <span class="outfit-item" style="background:#C4A77D">🧥 卡其风衣</span>
+                      <span class="outfit-item" style="background:#fff;border:1px solid #eee">👟 白色帆布鞋</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="chat-msg user">
+                  <div class="chat-avatar">我</div>
+                  <div class="chat-bubble">那个米色针织衫好像有点起球了</div>
+                </div>
+                <div class="chat-msg ai">
+                  <div class="chat-avatar">🌸</div>
+                  <div class="chat-bubble">那我帮你换一件！试试那件黑色高领打底衫？和风衣也很配，而且你只穿过1次～</div>
                 </div>
               </div>
-              <div class="dialog-ai">
-                <span class="dialog-avatar">🌸</span>
-                <div class="dialog-content">
+            </div>
+          </div>
+          
+          <!-- 场景3：全家人的衣橱 -->
+          <div class="story-slide" id="story-2">
+            <div class="story-card">
+              <div class="story-card-header">
+                <span class="story-number">03</span>
+                <h4>全家人的衣橱</h4>
+                <span class="story-category-tag">衣橱管理</span>
+              </div>
+              <div class="story-chat">
+                <div class="chat-msg user">
+                  <div class="chat-avatar">我</div>
+                  <div class="chat-bubble">帮我老公也录入一件外套</div>
+                </div>
+                <div class="chat-msg ai">
+                  <div class="chat-avatar">🌸</div>
+                  <div class="chat-bubble">好的～拍张照发给我吧！</div>
+                </div>
+                <div class="chat-msg user">
+                  <div class="chat-avatar">我</div>
+                  <div class="chat-bubble">📷 [图片]</div>
+                </div>
+                <div class="chat-msg ai">
+                  <div class="chat-avatar">🌸</div>
+                  <div class="chat-bubble">
+                    识别完成！藏蓝色夹克，春秋季，已录入老公衣橱 👨
+                    <div class="chat-tags">
+                      <span>👨 老公衣橱</span>
+                      <span>👧 小孩衣橱</span>
+                      <span>👥 多人管理</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 场景4：逛街参谋 -->
+          <div class="story-slide" id="story-3">
+            <div class="story-card">
+              <div class="story-card-header">
+                <span class="story-number">04</span>
+                <h4>逛街参谋</h4>
+                <span class="story-category-tag">购物参谋</span>
+              </div>
+              <div class="story-chat">
+                <div class="chat-msg user">
+                  <div class="chat-avatar">我</div>
+                  <div class="chat-bubble">📷 这件衣服怎么样？值得买吗？</div>
+                </div>
+                <div class="chat-msg ai">
+                  <div class="chat-avatar">🌸</div>
+                  <div class="chat-bubble">
+                    这件米色针织开衫...让我分析：
+                    <div class="chat-analysis">
+                      ✅ 颜色百搭，能和你现有的3条裤子搭配<br>
+                      ⚠️ 但你已有2件类似款式，利用率可能不高
+                    </div>
+                  </div>
+                </div>
+                <div class="chat-msg user">
+                  <div class="chat-avatar">我</div>
+                  <div class="chat-bubble">有道理...那我就不买了</div>
+                </div>
+                <div class="chat-msg ai">
+                  <div class="chat-avatar">🌸</div>
+                  <div class="chat-bubble">省下一笔！💰 你真正缺的是一件黑色基础款打底衫，要不要帮你搜一下？</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 场景5：店铺上新 -->
+          <div class="story-slide" id="story-4">
+            <div class="story-card">
+              <div class="story-card-header">
+                <span class="story-number">05</span>
+                <h4>店铺上新智能推荐</h4>
+                <span class="story-category-tag">购物参谋</span>
+              </div>
+              <div class="story-chat">
+                <div class="chat-msg ai">
+                  <div class="chat-avatar">🌸</div>
+                  <div class="chat-bubble">你关注的「优衣库」上新了 15 件新品，我帮你筛选出 3 件适合你的：</div>
+                </div>
+                <div class="chat-msg ai">
+                  <div class="chat-avatar">🌸</div>
+                  <div class="chat-bubble">
+                    <div class="chat-recommend">
+                      <strong>米色长款风衣</strong> ¥599<br>
+                      <small>符合轻熟通勤风格，正好补充你缺少的秋季外套</small>
+                    </div>
+                    <div class="chat-recommend">
+                      <strong>黑色高领打底衫</strong> ¥149<br>
+                      <small>你衣橱缺的基础款，利用率会很高</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="chat-msg user">
+                  <div class="chat-avatar">我</div>
+                  <div class="chat-bubble">那个风衣不错，帮我加入购物车</div>
+                </div>
+                <div class="chat-msg ai">
+                  <div class="chat-avatar">🌸</div>
+                  <div class="chat-bubble">已加入！🛒 这件你衣橱里利用率会很高~</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <!-- 滑动指示器 -->
+        <div class="slider-indicators">
+          <span class="indicator active" onclick="scrollToStory(0)"></span>
+          <span class="indicator" onclick="scrollToStory(1)"></span>
+          <span class="indicator" onclick="scrollToStory(2)"></span>
+          <span class="indicator" onclick="scrollToStory(3)"></span>
+          <span class="indicator" onclick="scrollToStory(4)"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
                   <p>早上好！今天杭州 18°C，多云，适合穿薄外套。推荐你今天这样穿 👇</p>
                   <div class="outfit-mini">
                     <div class="outfit-items-mini">
@@ -451,139 +592,6 @@
             </div>
           </div>
         </div>
-        
-        <!-- 场景3：全家人的衣橱 -->
-        <div class="story-card">
-          <div class="story-card-header">
-            <span class="story-number">03</span>
-            <h4>全家人的衣橱</h4>
-          </div>
-          <div class="story-dialogs">
-            <div class="dialog-row">
-              <div class="dialog-user">
-                <span class="dialog-avatar">我</span>
-                <div class="dialog-content">
-                  <p>帮我老公也录入一件外套</p>
-                </div>
-              </div>
-              <div class="dialog-ai">
-                <span class="dialog-avatar">🌸</span>
-                <div class="dialog-content">
-                  <p>好的～拍张照发给我吧！</p>
-                  <p class="dialog-note">📸 识别完成：藏蓝色夹克，春秋季，已录入老公衣橱 👨</p>
-                </div>
-              </div>
-            </div>
-            <div class="dialog-row">
-              <div class="dialog-user">
-                <span class="dialog-avatar">我</span>
-                <div class="dialog-content">
-                  <p>明天帮老公搭配一下，对了小孩学校有活动，帮我想想穿什么</p>
-                </div>
-              </div>
-              <div class="dialog-ai">
-                <span class="dialog-avatar">🌸</span>
-                <div class="dialog-content">
-                  <p>没问题！目前你管理了：👩 你自己 37件 / 👨 老公 12件 / 👧 小孩 8件</p>
-                  <div class="dialog-tags">
-                    <span>👨 老公衣橱</span>
-                    <span>👧 小孩衣橱</span>
-                    <span>👥 多人管理</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- 场景4：逛街参谋 -->
-        <div class="story-card">
-          <div class="story-card-header">
-            <span class="story-number">04</span>
-            <h4>逛街参谋</h4>
-          </div>
-          <div class="story-dialogs">
-            <div class="dialog-row">
-              <div class="dialog-user">
-                <span class="dialog-avatar">我</span>
-                <div class="dialog-content">
-                  <p>📷 [图片] 这件衣服怎么样？值得买吗？</p>
-                </div>
-              </div>
-              <div class="dialog-ai">
-                <span class="dialog-avatar">🌸</span>
-                <div class="dialog-content">
-                  <p>这件米色针织开衫...让我帮你分析：</p>
-                  <p class="dialog-note">✅ 颜色百搭，能和你现有的3条裤子搭配<br>⚠️ 但你已有2件类似款式，利用率可能不高</p>
-                </div>
-              </div>
-            </div>
-            <div class="dialog-row">
-              <div class="dialog-user">
-                <span class="dialog-avatar">我</span>
-                <div class="dialog-content">
-                  <p>有道理...那我就不买了</p>
-                </div>
-              </div>
-              <div class="dialog-ai">
-                <span class="dialog-avatar">🌸</span>
-                <div class="dialog-content">
-                  <p>省下一笔！💰 根据你的衣橱分析，你真正缺的是一件<strong>黑色基础款打底衫</strong>，要不要帮你搜一下？</p>
-                  <div class="dialog-tags">
-                    <span>💰 避免冲动消费</span>
-                    <span>🎯 精准推荐缺口</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- 场景5：店铺上新 -->
-        <div class="story-card">
-          <div class="story-card-header">
-            <span class="story-number">05</span>
-            <h4>店铺上新智能推荐</h4>
-          </div>
-          <div class="story-dialogs">
-            <div class="dialog-row">
-              <div class="dialog-user">
-                <span class="dialog-avatar">系统</span>
-                <div class="dialog-content">
-                  <p>📢 你关注的「优衣库」上新了 15 件新品</p>
-                </div>
-              </div>
-              <div class="dialog-ai">
-                <span class="dialog-avatar">🌸</span>
-                <div class="dialog-content">
-                  <p>🔍 根据你的风格偏好筛选完成：</p>
-                  <p class="dialog-note"><strong>✅ 推荐单品（3件）</strong><br>米色长款风衣 ¥599 - 符合轻熟通勤风格，正好补充你缺少的秋季外套<br>黑色高领打底衫 ¥149 - 你衣橱缺的基础款，利用率会很高</p>
-                </div>
-              </div>
-            </div>
-            <div class="dialog-row">
-              <div class="dialog-user">
-                <span class="dialog-avatar">我</span>
-                <div class="dialog-content">
-                  <p>那个风衣确实不错，我一直想买一件</p>
-                </div>
-              </div>
-              <div class="dialog-ai">
-                <span class="dialog-avatar">🌸</span>
-                <div class="dialog-content">
-                  <p>那这件很值得入手！🛒 你衣橱里现在只有1件风衣，利用率挺高的。要不要帮你加入购物车？</p>
-                  <div class="dialog-tags">
-                    <span>🔍 智能筛选</span>
-                    <span>✨ 风格匹配</span>
-                    <span>📊 基于衣橱分析</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-      </div>
     </div>
   </section>
 
