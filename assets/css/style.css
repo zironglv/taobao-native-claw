@@ -567,53 +567,29 @@ body {
 .stories-header p {
   font-size: 18px;
   color: var(--tb-text-light);
-}
-
-.stories-intro {
-  text-align: center;
-  margin-bottom: 40px;
-  padding: 24px;
-  background: var(--white);
-  border-radius: 16px;
-  border: 1px solid var(--tb-border);
-}
-
-.stories-intro-badge {
-  display: inline-block;
-  padding: 6px 16px;
-  background: linear-gradient(135deg, #FF9500, #FF6B00);
-  color: white;
-  border-radius: 20px;
-  font-size: 13px;
-  font-weight: 600;
-  margin-bottom: 12px;
-}
-
-.stories-intro h3 {
-  font-size: 22px;
-  font-weight: 600;
   margin-bottom: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
 }
 
-.stories-intro h3 span {
-  font-size: 24px;
-}
-
-.stories-intro p {
-  font-size: 15px;
+.skill-install-hint {
+  font-size: 14px;
   color: var(--tb-text-light);
-  max-width: 600px;
-  margin: 0 auto;
+  margin-top: 8px;
 }
 
-/* Story Grid - 5个场景卡片 */
+.skill-install-hint a {
+  color: var(--tb-orange);
+  text-decoration: none;
+}
+
+.skill-install-hint a:hover {
+  text-decoration: underline;
+}
+
+/* Story Tabs */
 .story-tabs {
   display: flex;
   gap: 8px;
+  justify-content: center;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
