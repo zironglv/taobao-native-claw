@@ -220,6 +220,15 @@ body {
   color: var(--tb-orange);
 }
 
+.hero-sublink .sublink-arrow {
+  margin-left: 4px;
+  transition: transform 0.2s;
+}
+
+.hero-sublink a:hover .sublink-arrow {
+  transform: translateX(4px);
+}
+
 .btn-secondary {
   background: var(--white);
   color: var(--tb-text);
