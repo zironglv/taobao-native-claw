@@ -472,6 +472,29 @@ body {
   min-height: 240px;
 }
 
+/* 使用场景对话框样式 */
+.demo-content .chat-bubble {
+  padding: 10px 14px;
+  border-radius: 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 90%;
+}
+
+.demo-content .chat-bubble.chat-user {
+  background: var(--tb-orange);
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+
+.demo-content .chat-bubble.chat-ai {
+  background: #f5f5f5;
+  color: var(--tb-text);
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+
 /* 用户故事 - 聊天样式 (新) */
 
 /* FAQ */
@@ -634,7 +657,7 @@ body {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  padding: 10px 0 10px 20px;
+  padding: 10px 20px 10px 40px;
 }
 
 .story-slider::-webkit-scrollbar {
@@ -1347,9 +1370,10 @@ body {
 
 /* Footer */
 .footer {
-  padding: 48px 24px 32px;
+  padding: 48px 24px;
   background: #f5f5f5;
   color: var(--tb-text);
+  text-align: center;
 }
 
 .footer-container {
@@ -1357,15 +1381,8 @@ body {
   margin: 0 auto;
 }
 
-.footer-main {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 32px;
-  border-bottom: 1px solid #e5e5e5;
-}
-
 .footer-brand {
-  flex-shrink: 0;
+  display: inline-block;
 }
 
 .footer-logo-text {
@@ -1381,87 +1398,6 @@ body {
   font-size: 14px;
   color: var(--tb-text-light);
   margin-top: 8px;
-}
-
-.footer-links-group {
-  display: flex;
-  gap: 80px;
-}
-
-.footer-col h4 {
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 16px;
-  color: var(--tb-text);
-}
-
-.footer-col a {
-  display: block;
-  font-size: 13px;
-  color: var(--tb-text-light);
-  text-decoration: none;
-  margin-bottom: 10px;
-  transition: color 0.2s;
-}
-
-.footer-col a:hover {
-  color: var(--tb-orange);
-}
-
-.footer-bottom {
-  padding-top: 24px;
-  text-align: center;
-}
-
-.footer-partners {
-  font-size: 13px;
-  color: var(--tb-text-light);
-  margin-bottom: 16px;
-}
-
-.footer-partners a {
-  color: var(--tb-text-light);
-  text-decoration: none;
-  margin: 0 8px;
-  transition: color 0.2s;
-}
-
-.footer-partners a:hover {
-  color: var(--tb-orange);
-}
-
-.footer-legal {
-  font-size: 12px;
-  color: #999;
-  margin-bottom: 12px;
-}
-
-.footer-legal a {
-  color: #999;
-  text-decoration: none;
-}
-
-.footer-legal a:hover {
-  color: var(--tb-text-light);
-}
-
-.footer-legal span {
-  margin: 0 8px;
-}
-
-.footer-copyright {
-  font-size: 12px;
-  color: #999;
-  line-height: 1.8;
-}
-
-.footer-copyright a {
-  color: #999;
-  text-decoration: none;
-}
-
-.footer-copyright a:hover {
-  color: var(--tb-text-light);
 }
 
 /* Stories Intro - 用户声音 */
