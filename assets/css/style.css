@@ -204,6 +204,22 @@ body {
   flex-wrap: wrap;
 }
 
+.hero-sublink {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.hero-sublink a {
+  color: var(--tb-text-light);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.hero-sublink a:hover {
+  color: var(--tb-orange);
+}
+
 .btn-secondary {
   background: var(--white);
   color: var(--tb-text);
